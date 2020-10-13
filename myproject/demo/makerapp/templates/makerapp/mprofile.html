@@ -1,0 +1,113 @@
+{% extends "makerapp/makerapp_layout.html" %}
+{% block content %}
+
+<body>
+    
+
+    <!-- inner banner -->
+    <div class="inner-banner-w3ls py-5" id="home">
+        <div class="container py-xl-5 py-lg-3">
+            <!-- register  -->
+            <div class="modal-body mt-md-2 mt-5">
+                <h3 class="title-w3 mb-5 text-center text-wh font-weight-bold">MAKER PROFILE</h3>
+                
+                </div>
+                <div class="form-group">
+                    <img src="{{data.image.url}}" height="100" width="100" alt="loading" />
+                </div>
+                    <div class="form-group">
+                        <label class="col-form-label">Username</label>
+                        <input type="text" class="form-control" placeholder="your name" name="t1" value="{{data.name}}" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-form-label">Age</label>
+                        <input type="number" class="form-control" placeholder="eg:30" name="t2" value="{{data.age}}" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-form-label">DOB</label>
+                        <input type="date" class="form-control" name="t3" value="{{data.DOB}}" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-form-label">Email</label>
+                        <input type="email" class="form-control" placeholder="loremipsum@email.com" name="t4" value="{{data.email}}" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-form-label">Phone</label>
+                        <input type="number" class="form-control" placeholder="9087765423" name="t5" value="{{data.phno}}" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-form-label">Address</label>
+                        <textarea class="form-control" placeholder="(po),(h)" name="t6" readonly>"{{data.address}}"</textarea>
+                    </div>
+                    
+            </div>
+            <!-- //register -->
+        </div>
+    </div>
+    <!-- //inner banner -->
+
+
+
+</body>
+
+
+
+
+
+
+
+
+{% endblock %}
+<table>
+    <tr>
+        <td>
+            <img src="{{data.image.url}}" height="100" width="100" alt="loading" />
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <label>name:</label><br>
+            <input type="text" placeholder="eg:john" name="t1" value="{{data.name}}" readonly>
+
+
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label>age:</label><br>
+            <input type="number" placeholder="eg:30" name="t2" value="{{data.age}}" readonly >
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label>DOB:</label><br>
+            <input type="date" name="t3" value="{{data.DOB}}" readonly >
+
+        </td>
+
+    </tr>
+    <tr>
+        <td>
+            <label>email:</label><br>
+            <input type="email" placeholder="eg:nighi@gmail.com" name="t4" value="{{data.email}}" readonly >
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label>ph.no:</label><br>
+            <input type="number" placeholder="eg:1234567890" name="t5" value="{{data.phno}}" readonly >
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label>address:</label><br>
+            <textarea placeholder="(po),(h)" name="t6"  readonly >{{data.address}}</textarea>
+           
+        </td>
+    </tr>
+    
+    
+   
+
+</table>

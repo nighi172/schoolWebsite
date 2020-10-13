@@ -1,0 +1,73 @@
+{% extends "publicapp/publicapp_layout.html" %}
+{% block content %}
+
+
+<body>
+   
+
+    <!-- inner banner -->
+    <div class="inner-banner-w3ls py-5" id="home">
+        <div class="container py-xl-5 py-lg-3">
+            <!-- login  -->
+            <div class="modal-body my-5 pt-4">
+                <h3 class="title-w3 mb-5 text-center text-wh font-weight-bold">Login Now</h3>
+                <form action="#" method="post">{% csrf_token %}
+                    <div class="form-group">
+                        <label class="col-form-label">Username</label>
+                        <input type="text" class="form-control" placeholder="your name" name="t1" required="">
+                    </div>
+                    <div class="form-group">
+                        <label class="col-form-label">Password</label>
+                        <input type="password" class="form-control" placeholder="*****" name="t2" required="">
+                    </div>
+                    <button type="submit" class="btn button-style-w3">Login</button>
+                    
+                </form>
+            </div>
+            <!-- //login -->
+        </div>
+    </div>
+    <!-- //inner banner -->
+
+    
+    
+    
+    
+    
+    
+    
+    
+    <!-- //move top icon -->
+
+
+
+</body></html>
+ 
+
+
+{% endblock %}
+
+
+<form action="{% url 'login' %}" method="post" enctype="multipart/form-data"> {% csrf_token %} 
+    <table>
+        <tr>
+            <td>
+                <label>username:</label><br>
+                <input type="text" placeholder="eg:john234" name="t1" required >
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>password:</label><br>
+                <input type="password" placeholder="eg:nbjhjnd" name="t2" required >
+            </td>
+        </tr>
+            
+        <tr>
+            <td>
+                <input type="submit" value="LogIn"  >
+            </td>
+        </tr>
+    </table>
+    {{message}}
+    </form>

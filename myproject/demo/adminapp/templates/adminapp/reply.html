@@ -1,0 +1,207 @@
+{% extends "adminapp/adminapp_layout.html" %}
+{% block content %}
+<html lang="en"><head>
+    <title>LEORA'Zz</title>
+    <!-- Meta Tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Modernize Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design">
+    <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <!-- //Meta Tags -->
+
+    <!-- Style-sheets -->
+    <!-- Bootstrap Css -->
+    <link href="../static/adminapp/css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+    <!-- Bootstrap Css -->
+    <!-- Common Css -->
+    <link href="../static/adminapp/css/style.css" rel="stylesheet" type="text/css" media="all">
+    <!--// Common Css -->
+    <!-- Nav Css -->
+    <link rel="stylesheet" href="../static/adminapp/css/style4.css">
+    <!--// Nav Css -->
+    <!-- Fontawesome Css -->
+    <link href="../static/adminapp/css/fontawesome-all.css" rel="stylesheet">
+    <!--// Fontawesome Css -->
+    <!--// Style-sheets -->
+
+    <!--web-fonts-->
+    <link href="//fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <!--//web-fonts-->
+</head>
+
+<body>
+    <div class="wrapper">
+        
+        
+
+        
+        <div id="content">
+            
+            
+            
+
+            
+            
+            
+
+            
+            <section class="forms-section">
+
+                <!-- Inline Form -->
+                <div class="outer-w3-agile mt-3">
+                    <h4 class="tittle-w3-agileits mb-4">REPLY</h4>
+                    <form action="#" method="post" class="form-inline">{% csrf_token %}
+                        <label class="sr-only" for="inlineFormInputName2">Name</label>
+                        <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" name="tb1" value="{{data.name}}" readonly>
+
+                        <label class="sr-only" for="inlineFormInputGroupUsername2">E-mail</label>
+                        <div class="input-group mb-2 mr-sm-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text"></div>
+                            </div>
+                            <input type="text" class="form-control" id="inlineFormInputGroupUsername2" name="tb2" value="{{data.email}}" readonly >
+                        </div>
+                        <label class="sr-only" for="inlineFormInputGroupUsername2">REPLY MESSAGE</label> 
+                        <div class="input-group mb-2 mr-sm-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text"></div>
+                            </div>
+                             <textarea placeholder="type your Reply" name="tb3" required></textarea> >
+                        </div>                        
+                        <button type="submit" class="btn btn-primary mb-2">REPLY</button>
+                    </form>
+                </div>
+                <!--// Inline Form -->
+                
+                
+                
+                
+                
+                
+                
+            </section>
+
+            <!--// Forms content -->
+
+            
+            
+            
+        </div>
+    </div>
+
+
+    <!-- Required common Js -->
+    <script src="js/jquery-2.2.3.min.js"></script>
+    <!-- //Required common Js -->
+
+    <!-- Sidebar-nav Js -->
+    <script>
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+    <!--// Sidebar-nav Js -->
+
+    <!-- Validation Script -->
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function () {
+            'use strict';
+
+            window.addEventListener('load', function () {
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.getElementsByClassName('needs-validation');
+
+                // Loop over them and prevent submission
+                var validation = Array.prototype.filter.call(forms, function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+    </script>
+    <!--// Validation Script -->
+
+    <!-- dropdown nav -->
+    <script>
+        $(document).ready(function () {
+            $(".dropdown").hover(
+                function () {
+                    $('.dropdown-menu', this).stop(true, true).slideDown("fast");
+                    $(this).toggleClass('open');
+                },
+                function () {
+                    $('.dropdown-menu', this).stop(true, true).slideUp("fast");
+                    $(this).toggleClass('open');
+                }
+            );
+        });
+    </script>
+    <!-- //dropdown nav -->
+
+    <!-- Js for bootstrap working-->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- //Js for bootstrap working -->
+
+
+
+</body></html>{% endblock %}
+
+
+<form action="{% url 'reply' data.id %}?id=data.id" method="POST" >{% csrf_token %}
+    <table>
+    
+        <tr>
+            <td>
+                <label>name:</label><br>
+                <input type="text" placeholder="eg:john" name="tb1"value="{{data.name}}" readonly >
+    
+    
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>email:</label> <br>
+                <input type="text" placeholder="eg:abc@gmail.com" name="tb2" value="{{data.email}}" readonly>
+            </td>
+            
+        </tr>
+        <tr>
+            <td>
+                <label>relpy msg:</label> <br>
+                <textarea placeholder="type your Reply" name="tb3" required></textarea>
+                
+            </td>
+                
+        </tr>
+        
+                
+        </tr>
+        
+        <tr>
+            <td>
+                
+                <input type="submit" value="Reply"  >
+            </td>
+        </tr>
+    </table>
+    {{msg}}
+    
+</form>

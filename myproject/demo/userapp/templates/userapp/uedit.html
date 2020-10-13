@@ -1,0 +1,140 @@
+{% extends "userapp/userapp_layout.html" %}
+{% block content %}
+<body>
+    
+
+    <!-- inner banner -->
+    <div class="inner-banner-w3ls py-5" id="home">
+        <div class="container py-xl-5 py-lg-3">
+            <!-- register  -->
+            <div class="modal-body mt-md-2 mt-5">
+                <h3 class="title-w3 mb-5 text-center text-wh font-weight-bold">EDIT</h3>
+                <form action="{% url 'uedit' %}" method="post"enctype="multipart/form-data">{% csrf_token %}
+                    <div class="form-group">
+                        <label class="col-form-label">Username</label>
+                        <input type="text" class="form-control" placeholder="your name" name="t1" value="{{data.name}}" required="">
+                    </div>
+                    <div class="form-group">
+                        <label class="col-form-label">Age</label>
+                        <input type="number" class="form-control" placeholder="eg:30" name="t2" value="{{data.age}}" required="">
+                    </div>
+                    <div class="form-group">
+                        <label class="col-form-label">DOB</label>
+                        <input type="date" class="form-control" name="t3" value="{{data.DOB}}" required="">
+                    </div>
+                    <div class="form-group">
+                        <label class="col-form-label">Email</label>
+                        <input type="email" class="form-control" placeholder="loremipsum@email.com" name="t4" value="{{data.email}}" required="">
+                    </div>
+                    <div class="form-group">
+                        <label class="col-form-label">Phone</label>
+                        <input type="number" class="form-control" placeholder="9087765423" name="t5" value="{{data.phno}}" required="">
+                    </div>
+                    <div class="form-group">
+                        <label class="col-form-label">Address</label>
+                        <textarea class="form-control" placeholder="(po),(h)" name="t6" required="">"{{data.address}}"</textarea>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-form-label">Password</label>
+                        <input type="password" class="form-control" placeholder="*****" name="t7" value="{{data.password}}" required="">
+                    </div>
+                    <div class="form-group">
+                        <label class="col-form-label">Confirm Password</label>
+                        <input type="password" class="form-control" placeholder="*****" name="t8" value="{{data.password}}" required="">
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="file" name="img" class="form-control" value="{{data.image}}" required="">
+                    </div>
+                
+
+                    
+                    <button type="submit" class="btn button-style-w3">Update</button>
+                    {% if msg %}
+                    <script>
+                        alert('{{msg}}');
+                    </script>
+                    {% endif %}                 
+                </form>
+            </div>
+            <!-- //register -->
+        </div>
+    </div>
+    <!-- //inner banner -->
+
+
+
+</body>
+
+
+
+{% endblock %}
+
+<form  action="{% url 'uedit' %}" method="POST" >{% csrf_token %}
+    <table>
+    
+        <tr>
+            <td>
+                <label>name:</label><br>
+                <input type="text" placeholder="eg:john" name="t1" value="{{data.name}}" required >
+    
+    
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>age:</label><br>
+                <input type="number" placeholder="eg:30" name="t2" value="{{data.age}}" required >
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>DOB:</label><br>
+                <input type="date" name="t3" value="{{data.DOB}}" required >
+    
+            </td>
+    
+        </tr>
+        <tr>
+            <td>
+                <label>email:</label><br>
+                <input type="email" placeholder="eg:nighi@gmail.com" name="t4" value="{{data.email}}" required >
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>ph.no:</label><br>
+                <input type="number" placeholder="eg:1234567890" name="t5" value="{{data.phno}}" required >
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>address:</label><br>
+                <textarea placeholder="(po),(h)" name="t6"  required>{{data.address}}</textarea>
+               
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>password:</label><br>
+                <input type="password" placeholder="eg:nbjhjnd" name="t7" value="{{data.password}}" required >
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>repeat password:</label><br>
+                <input type="password" placeholder="same as above" name="t8" value="{{data.password}}" required >
+            </td>
+        </tr>
+        <tr>
+            <td>
+                
+                <input type="submit" value="update"  >
+            </td>
+        </tr>
+        
+       
+    
+    </table>
+    {{msg}}
+    </form>

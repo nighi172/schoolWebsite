@@ -1,0 +1,106 @@
+{% extends "userapp/userapp_layout.html" %}
+{% block content %}
+
+<body>
+    
+    <section class="contact py-5" id="contact">
+        <div class="container py-xl-5 py-lg-3" style="height: 75%">
+            <h3 class="title-w3 mb-sm-5 mb-4 text-center text-wh font-weight-bold"><span style="color:rgb(0, 132, 255);font-weight:bold">MESSAGE</span></h3>
+            
+            <div class="contact_grid_right pt-4">
+                <form action="{% url 'umessage' %}" method="POST">{% csrf_token %}
+                    <div class="row contact_left_grid">
+                        <div class="col-lg-6 con-left" data-aos="fade-up">
+                            <div class="form-group">
+                                <input class="form-control" type="text" name="tb1" placeholder="Name" value="{{data.name}}" readonly>
+                            </div>
+                            <br>
+                            <br>
+                            <div class="form-group">
+                                <input class="form-control" type="email" name="tb2" placeholder="Email" value="{{data.email}}" readonly>
+                            </div>
+                            <br>
+                            <br>
+                        </div>
+                        <div class="col-lg-6 con-right" data-aos="fade-up">
+                            <div class="form-group" >
+                                <textarea style="height: 45%" id="textarea" placeholder="Your message here..." name="tb3" required></textarea>
+                            </div>
+                            <div class="sub-honey">
+                                <button class="form-control btn" type="submit">SEND</button>
+                            </div>
+                            {% if msg %}
+                            <script>
+                                alert('{{msg}}');
+                            </script>
+                            {% endif %}                                                     
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- //contact -->
+
+    <!-- footer -->
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+{% endblock %}
+
+
+<form action="{% url 'umessage' %}" method="POST" >{% csrf_token %}
+    <table>
+    
+        <tr>
+            <td>
+                <label>name:</label><br>
+                <input type="text" placeholder="eg:john" name="tb1" value="{{data.name}}" readonly >
+    
+    
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>email:</label> <br>
+                <input type="text" placeholder="eg:abc@gmail.com" name="tb2" value="{{data.email}}" readonly>
+            </td>
+            
+        </tr>
+        <tr>
+            <td>
+                <label>msg:</label> <br>
+                <textarea placeholder="type your message" name="tb3" required></textarea>
+                
+            </td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+                
+                <input type="submit" value="SEND"  >
+            </td>
+        </tr>
+    </table>
+    {{msg}}
+    
+</form>
