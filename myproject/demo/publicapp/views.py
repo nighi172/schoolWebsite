@@ -34,11 +34,11 @@ def registration(request):
         else:
             msg='password is not match' 
 
-    return render(request,'publicapp/registration.html',{'msg':msg})
+    return render(request,'publicapp/layout.html',{'msg':msg})
 
 
 def about(request):
-    return render(request,'publicapp/about.html',{})
+    return render(request,'publicapp/layout.html',{})
 
 def contact(request):
     message=""
@@ -48,10 +48,10 @@ def contact(request):
         c=request.POST.get('tb3')
         data=tbl_cont.objects.create(name=a,email=b,msg=c,regid='0')
         message="SEND successfully"
-    return render(request,'publicapp/contact.html',{'message':message})
+    return render(request,'publicapp/layout.html',{'message':message})
 
 def home(request):
-    return render(request,"publicapp/home.html",{})
+    return render(request,"publicapp/layout.html",{})
 
 def login(request):
     message=""
@@ -82,7 +82,7 @@ def login(request):
                 message="invalid usertype"
         else:
             message="invalid username and password"
-    return render(request,"publicapp/login.html",{'message':message})
+    return render(request,"publicapp/layout.html",{'message':message})
 
 def logout(request):
     data=request.session.delete()

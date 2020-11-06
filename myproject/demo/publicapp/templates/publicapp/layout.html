@@ -1,0 +1,382 @@
+
+
+<html lang="zxx"><head>
+    <title>LEORA'Zz EDUCATION  </title>
+    <!-- Meta tag Keywords -->
+ 
+    <script>
+        addEventListener("load", function () {
+setTimeout(hideURLbar, 0);
+}, false);
+
+function hideURLbar() {
+window.scrollTo(0, 1);
+}
+</script>
+    <!-- //Meta tag Keywords -->
+
+    <!-- Custom-Files -->
+    <link href="../static/publicapp/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <!-- Bootstrap-CSS -->
+    <link href="../static/publicapp/css/style.css" rel="stylesheet" type="text/css">
+    <!-- Style-CSS -->
+    <link href="../static/publicapp/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Font-Awesome-Icons-CSS -->
+    <!-- //Custom-Files -->
+
+    <!-- Web-Fonts -->
+    <link href="//fonts.googleapis.com/css?family=Lora:400,400i,700,700i&amp;subset=cyrillic,cyrillic-ext,latin-ext,vietnamese" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800&amp;subset=latin-ext" rel="stylesheet">
+    <!-- //Web-Fonts -->
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <div class="container">
+            <div class="header d-lg-flex justify-content-between align-items-center py-2 px-sm-2 px-1">
+                <!-- logo -->
+                <div id="logo">
+                    <h1><a href="{% url 'about' %}">LEORA'Zz</a></h1>
+                </div>
+                <!-- //logo -->
+                <!-- nav -->
+                <div class="nav_w3ls ml-lg-5">
+                    <nav>
+                        <label for="drop" class="toggle">Menu</label>
+                        <input type="checkbox" id="drop">
+                        <ul class="menu">
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                            <li><a href="#register">Register</a></li>
+                            <li><a href="#login">Login</a></li>
+                            
+                        </ul>
+                    </nav>
+                </div>
+                <!-- //nav -->
+            </div>
+        </div>
+    </header>
+    <!-- //header -->
+
+
+{% block content %}
+
+
+<body>
+    <!-- banner -->
+    <div class="main-w3pvt mian-content-wthree text-center" id="home">
+        <div class="container">
+            <div class="style-banner mx-auto">
+                <h3 class="text-wh font-weight-bold">Welcome to  <span style="color:blue;font-weight:bold">LEORA'Zz</span>Education</h3>
+                <h2><p style="color:rgb(255, 187, 0)">We are waiting...<br> RING...9061532785</p></h2>
+                
+            </div>
+        </div>
+    </div>
+    <!-- //banner -->
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body>
+    
+
+    <!-- banner -->
+    
+    <!-- //banner -->
+
+    <!-- banner bottom -->
+    <section class="w3ls-bnrbtm py-5" id="about">
+        <div class="container py-xl-5 py-lg-3">
+            <h3 class="title-w3 mb-md-5 mb-sm-4 mb-2 text-center font-weight-bold">About Us</h3>
+            <div class="row">
+                <div class="col-lg-6 text-center">
+                    <img src="../static/publicapp/images/about.jpg" alt="about" class="img-fluid mt-4">
+                </div>
+                <div class="col-lg-6 pr-xl-5 mt-4">
+                    <h3 class="title-sub mb-4">Child Care Centre Clarence Street </h3>
+                    <p class="sub-para">Kids Club Clarence Street is conveniently located at the north end of Sydney’s CBD,
+                        right at the exit of Wynyard Train Station. 
+                        The Centre conveniently has 15 minutes of underground parking to make pick up and drop off easier.
+                        Our central location makes it easily accessible whether you travel on Sydney’s public transport network or by car.</p>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //banner bottom -->
+
+    <!-- services -->
+    
+    
+
+</body>
+
+<body>
+    
+    <section class="contact py-5" id="contact">
+        <div class="container py-xl-5 py-lg-3" style="height: 75%">
+            <h3 class="title-w3 mb-sm-5 mb-4 text-center text-wh font-weight-bold"><span style="color:rgb(0, 132, 255);font-weight:bold">CONTACT US</span></h3>
+            
+            <div class="contact_grid_right pt-4">
+                <form action="{% url 'contact' %}" method="POST">{% csrf_token %}
+                    <div class="row contact_left_grid">
+                        <div class="col-lg-6 con-left" data-aos="fade-up">
+                            <div class="form-group">
+                                <input class="form-control" type="text" name="tb1" placeholder="Name" required>
+                            </div>
+                            <br>
+                            <br>
+                            <div class="form-group">
+                                <input class="form-control" type="email" name="tb2" placeholder="Email" required>
+                            </div>
+                            <br>
+                            <br>
+                        </div>
+                        <div class="col-lg-6 con-right" data-aos="fade-up">
+                            <div class="form-group" >
+                                <textarea style="height: 45%" id="textarea" placeholder="Your message here..." name="tb3" required></textarea>
+                            </div>
+                            <div class="sub-honey">
+                                <button class="form-control btn" type="submit">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- //contact -->
+
+    <!-- footer -->
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+<body>
+   
+
+    <!-- inner banner -->
+    <div class="inner-banner-w3ls py-5" id="login">
+        <div class="container py-xl-5 py-lg-3">
+            <!-- login  -->
+            <div class="modal-body my-5 pt-4">
+                <h3 class="title-w3 mb-5 text-center text-wh font-weight-bold">Login Now</h3>
+                <form action="#" method="post">{% csrf_token %}
+                    <div class="form-group">
+                        <label class="col-form-label">Username</label>
+                        <input type="text" class="form-control" placeholder="your name" name="t1" required="">
+                    </div>
+                    <div class="form-group">
+                        <label class="col-form-label">Password</label>
+                        <input type="password" class="form-control" placeholder="*****" name="t2" required="">
+                    </div>
+                    <button type="submit" class="btn button-style-w3">Login</button>
+                    
+                </form>
+            </div>
+            <!-- //login -->
+        </div>
+    </div>
+    <!-- //inner banner -->
+
+    
+    
+    
+    
+    
+    
+    
+    
+    <!-- //move top icon -->
+
+
+
+</body></html>
+ 
+
+
+
+
+<body>
+    
+
+    <!-- inner banner -->
+    <div class="inner-banner-w3ls py-5" id="register">
+        <div class="container py-xl-5 py-lg-3">
+            <!-- register  -->
+            <div class="modal-body mt-md-2 mt-5">
+                <h3 class="title-w3 mb-5 text-center text-wh font-weight-bold">Register Now</h3>
+                <form action="#" method="post"enctype="multipart/form-data">{% csrf_token %}
+                    <div class="form-group">
+                        <label class="col-form-label">Username</label>
+                        <input type="text" class="form-control" placeholder="your name" name="t1" required="">
+                    </div>
+                    <div class="form-group">
+                        <label class="col-form-label">Age</label>
+                        <input type="number" class="form-control" placeholder="eg:30" name="t2" required="">
+                    </div>
+                    <div class="form-group">
+                        <label class="col-form-label">DOB</label>
+                        <input type="date" class="form-control" name="t3" required="">
+                    </div>
+                    <div class="form-group">
+                        <label class="col-form-label">Email</label>
+                        <input type="email" class="form-control" placeholder="loremipsum@email.com" name="t4" required="">
+                    </div>
+                    <div class="form-group">
+                        <label class="col-form-label">Phone</label>
+                        <input type="number" class="form-control" placeholder="9087765423" name="t5" required="">
+                    </div>
+                    <div class="form-group">
+                        <label class="col-form-label">Address</label>
+                        <textarea class="form-control" placeholder="(po),(h)" name="t6" required=""></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-form-label">Password</label>
+                        <input type="password" class="form-control" placeholder="*****" name="t7" required="">
+                    </div>
+                    <div class="form-group">
+                        <label class="col-form-label">Confirm Password</label>
+                        <input type="password" class="form-control" placeholder="*****" name="t8" required="">
+                    </div>
+                    <div class="form-group">
+                        <h2> Register with:</h2>
+                        <label> Maker: </label><br>
+                        <input type="radio" class="form-control" id="maker" name="t9" value="maker">
+                    </div>
+                    <div class="form-group">
+                        <input type="radio" class="form-control" id="user" name="t9" value="user" >
+                        <label>User: </label><br>
+                    </div>
+                    <div class="form-group">
+                        <input type="file" name="img" class="form-control" required>
+                    </div>
+                
+
+                    
+                    <button type="submit" class="btn button-style-w3">Register</button>
+                    {% if msg %}
+                    <script>
+                        alert('{{msg}}');
+                    </script>
+                    {% endif %} 
+                </form>
+            </div>
+            <!-- //register -->
+        </div>
+    </div>
+    <!-- //inner banner -->
+
+
+
+</body>
+
+{% endblock %}
+
+
+
+
+
+
+<body>
+    <!-- footer -->
+    <footer class="py-5">
+        <div class="container py-xl-4 py-lg-3">
+            <div class="row footer-grids">
+                <div class="col-lg-2 col-6 footer-grid">
+                    <h3 class="mb-sm-4 mb-3">LEORA'Zz EDUCATION</h3>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#home">Index</a>
+                        </li>
+                        <li>
+                            <a href="#about">About Us</a>
+                        </li>
+                        
+                        
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-6 footer-grid footer-contact mt-lg-0 mt-4">
+                    <h3 class="mb-sm-4 mb-3">Get In Touch</h3>
+                    <ul class="list-unstyled">
+                        <li>
+                            +91 9061532785
+                        </li>
+                        <li>
+                            <a href="nighimolakkar@gmail.com">info@example.com</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-6 footer-grid text-lg-right">
+                    <ul class="list-unstyled">
+                        
+                        <li>
+                            <a href="#login">Login</a>
+                        </li>
+                        <li>
+                            <a href="#register">Register</a>
+                        </li>
+                        <li>
+                            <a href="#contact">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 footer-grid mt-lg-0 mt-4">
+                    <div class="footer-logo">
+                        <h2 class="text-lg-center text-center">
+                            <a class="logo text-wh font-weight-bold" href="{% url 'home' %}">
+                                LEORA'Zz</a>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+
+
+
+</body>
+
+
+
+
+
+        
